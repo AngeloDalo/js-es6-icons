@@ -1,0 +1,84 @@
+:root {
+    --square-size: 6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Libre Baskerville', serif;
+    min-width: 288px;
+}
+
+/*header*/
+header {
+    padding-top: 2em;
+}
+
+header h1 {
+    color: #29b1dd;
+}
+
+.options {
+    background-color: #29b1dd;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+}
+/*/header*/
+
+.content {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1em;
+    background-color: #dddddd;
+    row-gap: 4em;
+    column-gap: 2em;
+    justify-content:space-between;
+}
+
+.square {
+    width: calc(100% / var(--square-size));
+    height: initial;
+    text-align: center;
+    cursor: pointer;
+    height: 80px;
+    padding-top: 15px;
+    background-color: white;
+    border-radius: 5%;
+    -webkit-box-shadow: 2px 2px 5px 0px #000000;
+    -moz-box-shadow: 2px 2px 5px 0px #000000;
+    -o-box-shadow: 2px 2px 5px 0px #000000;
+    box-shadow: 2px 2px 5px 0px #000000;
+}
+
+.blue {
+    color: blue;
+}
+
+.orange {
+    color: orange;
+}
+
+.green {
+    color: green;
+}
+
+.square i {
+    font-size: 200%;
+}
+
+.square span {
+    display: inline-block;
+    width: 100%;
+}
+
+
