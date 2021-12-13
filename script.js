@@ -1,3 +1,17 @@
+function addIcon(array, container) {
+    container.innerHTML = '';
+    for (let i = 0; i < array.length; i++) {
+        const singleIcon = array[i];
+        const addDiv = `
+        <div class=square>
+            <i class="${singleIcon.family} ${singleIcon.prefix}${singleIcon.name} ${singleIcon.color}"></i>
+            <span>${singleIcon.name}</span>
+        </div>
+        `;
+        container.innerHTML += addDiv;
+    }
+}
+
 const categories=[
 	{
 		name: 'cat',
@@ -112,3 +126,6 @@ const categories=[
 		color: 'blue'
 	}
 ];
+
+const container = document.querySelector('.content');
+addIcon(categories, container);
