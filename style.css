@@ -40,7 +40,8 @@ header h1 {
     flex-wrap: wrap;
     padding: 1em;
     background-color: #dddddd;
-    gap: 2em;
+    row-gap: 4em;
+    column-gap: 2em;
     justify-content:space-between;
 }
 
@@ -75,7 +76,9 @@ header h1 {
     font-size: 200%;
 }
 
-.no-display {
-    display: none;
+.square span {
+    display: inline-block;
+    width: 100%;
 }
+
 

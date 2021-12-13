@@ -172,7 +172,6 @@ const categories=[
 ];
 
 const container = document.querySelector('.content');
-
 const option = document.getElementById ('categories');
 
 option.addEventListener ('click', function () {
