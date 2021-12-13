@@ -1,5 +1,5 @@
 :root {
-    --square-size: 5;
+    --square-size: 6;
 }
 
 * {
@@ -8,13 +8,10 @@
     box-sizing: border-box;
 }
 
-.flex-row {
-    display: flex;
-}
-
 body {
     font-size: 100%;
     font-family: 'Libre Baskerville', serif;
+    min-width: 288px;
 }
 
 /*header*/
@@ -36,3 +33,44 @@ header h1 {
     font-size: 1.2em;
 }
 /*/header*/
+
+.content {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1em;
+    background-color: #dddddd;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+.square {
+    width: calc(100% / var(--square-size));
+    height: initial;
+    text-align: center;
+    cursor: pointer;
+    height: 80px;
+    padding-top: 15px;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 5px 0px #000000;
+    -moz-box-shadow: 2px 2px 5px 0px #000000;
+    -o-box-shadow: 2px 2px 5px 0px #000000;
+    box-shadow: 2px 2px 5px 0px #000000;
+}
+
+.blue {
+    color: blue;
+}
+
+.orange {
+    color: orange;
+}
+
+.purple {
+    color: purple;
+}
+
+.square i {
+    font-size: 200%;
+}
+
