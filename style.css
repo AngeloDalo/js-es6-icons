@@ -41,7 +41,7 @@ header h1 {
     padding: 1em;
     background-color: #dddddd;
     gap: 2em;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 .square {
@@ -73,5 +73,9 @@ header h1 {
 
 .square i {
     font-size: 200%;
+}
+
+.no-display {
+    display: none;
 }
 

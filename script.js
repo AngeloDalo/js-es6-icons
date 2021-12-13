@@ -1,14 +1,58 @@
-function addIcon(array, container) {
+function addIcon(array, container, value) {
     container.innerHTML = '';
-    for (let i = 0; i < array.length; i++) {
-        const singleIcon = array[i];
-        const addDiv = `
-        <div class=square>
-            <i class="${singleIcon.family} ${singleIcon.prefix}${singleIcon.name} ${singleIcon.color}"></i>
-            <span>${singleIcon.name}</span>
-        </div>
-        `;
-        container.innerHTML += addDiv;
+    if (value == 'all') {
+        for (let i = 0; i < array.length; i++) {
+            const singleIcon = array[i];
+            let addDiv = `
+            <div class=square>
+                <i class="${singleIcon.family} ${singleIcon.prefix}${singleIcon.name} ${singleIcon.color}"></i>
+                <span>${singleIcon.name}</span>
+            </div>
+            `;
+            container.innerHTML += addDiv;
+        }
+    }
+    if (value == 'animal') {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].color == 'orange') {
+                const singleIcon = array[i];
+                let addDiv = `
+                <div class=square>
+                    <i class="${singleIcon.family} ${singleIcon.prefix}${singleIcon.name} ${singleIcon.color}"></i>
+                    <span>${singleIcon.name}</span>
+                </div>
+                `;
+                container.innerHTML += addDiv;
+            }
+        }
+    }
+    if (value == 'vegetable') {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].color == 'green') {
+                const singleIcon = array[i];
+                let addDiv = `
+                <div class=square>
+                    <i class="${singleIcon.family} ${singleIcon.prefix}${singleIcon.name} ${singleIcon.color}"></i>
+                    <span>${singleIcon.name}</span>
+                </div>
+                `;
+                container.innerHTML += addDiv;
+            }
+        }
+    }
+    if (value == 'user') {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].color == 'blue') {
+                const singleIcon = array[i];
+                let addDiv = `
+                <div class=square>
+                    <i class="${singleIcon.family} ${singleIcon.prefix}${singleIcon.name} ${singleIcon.color}"></i>
+                    <span>${singleIcon.name}</span>
+                </div>
+                `;
+                container.innerHTML += addDiv;
+            }
+        }
     }
 }
 
@@ -128,4 +172,11 @@ const categories=[
 ];
 
 const container = document.querySelector('.content');
-addIcon(categories, container);
+
+const option = document.getElementById ('categories');
+
+option.addEventListener ('click', function () {
+    addIcon(categories, container, option.value);
+});
+
+
