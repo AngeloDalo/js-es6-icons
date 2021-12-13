@@ -52,6 +52,7 @@ header h1 {
     height: 80px;
     padding-top: 15px;
     background-color: white;
+    border-radius: 5%;
     -webkit-box-shadow: 2px 2px 5px 0px #000000;
     -moz-box-shadow: 2px 2px 5px 0px #000000;
     -o-box-shadow: 2px 2px 5px 0px #000000;
